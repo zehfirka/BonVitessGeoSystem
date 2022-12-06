@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BonVitess</string>
+    <string name="stopA"> Початкова зупинка</string>
+    <string name="stopB"> Кінцева зупинка</string>
+    <string name="pointA"> Початкова точка</string>
+    <string name="pointB"> Кінцева точка</string>
+    <string name="busNumber">Номер маршруту</string>
+    <string name="title_activity_display_result">DisplayResultActivity</string>
+    <string name="choosing_text">Критерії пошуку:</string>
+    <string name="button_name">Пошук</string>
+
+</resources>

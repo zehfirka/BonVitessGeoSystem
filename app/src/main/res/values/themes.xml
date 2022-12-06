@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BonVitess" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/contrast_base</item>
+        <item name="colorPrimaryVariant">#333</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/second</item>
+        <item name="colorSecondaryVariant">@color/contrast_base</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorSecondary</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.BonVitess.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.BaseTest.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.BaseTest.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.BaseTest.Night" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/contrast</item>
+        <item name="colorPrimaryVariant">@color/basic</item>
+        <item name="colorOnPrimary">@color/basic</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/second</item>
+        <item name="colorSecondaryVariant">@color/second</item>
+        <item name="colorOnSecondary">@color/second</item>
+        <item name="colorAccent">@color/contrast</item>
+        <item name="android:textColor">@color/night_white</item>
+        <item name="backgroundColor">@color/basic</item>
+    </style>
+    <style name="Button">
+        ..
+        <item name="android:background">@drawable/cog_outline</item>
+        ..
+    </style>
+
+    <style name="search_Button">
+        <item name="android:background">@drawable/magnify</item>
+        <item name="android:numbersBackgroundColor">@color/white</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+</resources>

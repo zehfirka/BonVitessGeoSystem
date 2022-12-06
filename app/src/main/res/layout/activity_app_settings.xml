@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_base"
+    tools:context=".AppSettingsActivity">
+
+    <TextView
+        android:id="@+id/settingsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Налаштування"
+        android:textAlignment="center"
+        android:textColor="@color/contrast"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/settingsRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingsTextView2"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/settingsRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Вимкнено"
+            android:textColor="@color/contrast"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/settingsRadio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Ввімкнено"
+            android:textColor="@color/contrast"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/settingsRadio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Як в системі"
+            android:textColor="@color/contrast"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/settingsTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingsTextView"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Темний режим | Dark Mode"
+        android:textColor="@color/contrast"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

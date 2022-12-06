@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_result"
+    android:layout_height="match_parent"
+    android:background="@color/grey_base"
+    tools:context=".DisplayResultActivity">
+
+  <TextView
+      android:id="@+id/textView4"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="25sp"
+      android:bottomLeftRadius="10dp"
+      android:bottomRightRadius="10dp"
+      android:fontFamily="@font/montserrat_medium"
+      android:text="Маршрут за запитом"
+      android:textAlignment="center"
+      android:textColor="@color/contrast"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      android:topLeftRadius="10dp"
+      android:topRightRadius="10dp" />
+
+
+
+  <TextView
+      android:id="@+id/routeText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/textView4"
+      android:layout_marginTop="30dp"
+      android:textColor="@color/contrast"
+      android:textSize="15dp"
+      android:fontFamily="@font/montserrat_bold"
+      android:text="Вулиця Жилянська - метро 'Політехнічний інститут'"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/resultView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/routeText"
+      android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

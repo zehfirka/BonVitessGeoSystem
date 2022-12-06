@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_base"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25sp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/contrast"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:drawableEndCompat="@drawable/city_variant_outline" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="OnSettingsButtonClick" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/contrast_base"
+        android:id="@+id/cardView"
+        android:layout_alignParentBottom="true"
+        android:layout_height="340dp"
+        app:cardCornerRadius="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/helloText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/basic"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Куди їдемо?" />
+
+            <EditText
+                android:id="@+id/editTextStart"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:autofillHints=""
+                android:drawableStart="@drawable/map_marker_right_outline"
+                android:ems="10"
+                android:enabled="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="@string/stopA"
+                android:inputType="textPersonName"
+                android:shadowColor="@color/second"
+                android:textColor="@color/second"
+                android:textColorHighlight="@color/second"
+                android:textColorHint="@color/second"
+                android:textColorLink="@color/second"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/editTextFinish"
+                android:layout_width="360dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10sp"
+                android:autofillHints=""
+                android:layout_below="@id/editTextStart"
+                android:drawableStart="@drawable/map_marker_right_outline"
+                android:ems="10"
+                android:enabled="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="@string/stopB"
+                android:inputType="textPersonName"
+                android:shadowColor="@color/second"
+                android:textColor="@color/second"
+                android:textColorHighlight="@color/second"
+                android:textColorHint="@color/second"
+                android:textColorLink="@color/second" />
+
+            <TextView
+                android:id="@+id/infoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/choosing_text"
+                android:layout_below="@id/editTextFinish"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/basic"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="15dp"
+                android:checkedButton="@id/radioButton"
+                android:layout_below="@id/infoTextView"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="За зупинками"
+                    android:textColor="@color/second"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="За точками"
+                    android:textAllCaps="false"
+                    android:textColor="@color/second"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="За номером"
+                    android:textColor="@color/second"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/search_Button"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:onClick="mOnButtonClick"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/radioGroup"
+                android:layout_marginTop="-20dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

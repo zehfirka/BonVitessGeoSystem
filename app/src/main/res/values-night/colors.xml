@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey_base">#222831</color>
+    <color name="second">#EEEEEE</color>
+    <color name="basic">#FFD369</color>
+    <color name="night_white">#EEEEEE</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="contrast_base">#FF000000</color>
+    <color name="contrast">#FFD369</color>
+</resources>
