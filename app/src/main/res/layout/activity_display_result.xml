@@ -15,7 +15,7 @@
       android:layout_marginTop="25sp"
       android:bottomLeftRadius="10dp"
       android:bottomRightRadius="10dp"
-      android:fontFamily="@font/montserrat_medium"
+      android:fontFamily="@font/montserrat_alternates"
       android:text="Маршрут за запитом"
       android:textAlignment="center"
       android:textColor="@color/contrast"
@@ -25,18 +25,16 @@
       android:topRightRadius="10dp" />
 
 
-
   <TextView
       android:id="@+id/routeText"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@id/textView4"
       android:layout_marginTop="30dp"
-      android:textColor="@color/contrast"
-      android:textSize="15dp"
-      android:fontFamily="@font/montserrat_bold"
+      android:fontFamily="@font/montserrat_alternates"
       android:text="Вулиця Жилянська - метро 'Політехнічний інститут'"
-      />
+      android:textColor="@color/contrast"
+      android:textSize="14dp" />
 
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/resultView"

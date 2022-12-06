@@ -5,28 +5,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.HintViewHolder> {
+    List<routes> routesList;
+
+    public ResultAdapter(List<routes> routesList) {
+        this.routesList = routesList;
+    }
+
     public static class HintViewHolder extends RecyclerView.ViewHolder {
-        TextView routeText;
         TextView timeText;
         TextView hintText;
         HintViewHolder(View itemView) {
             super(itemView);
-            routeText = (TextView) itemView.findViewById(R.id.stepText);
             timeText = (TextView) itemView.findViewById(R.id.timeText);
             hintText = (TextView) itemView.findViewById(R.id.hintText);
 
         }
     }
-    List<RecycleHolder> holders;
-    ResultAdapter(List<RecycleHolder> holders){
-        this.holders = holders;
-    }
+
     @Override
     public HintViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.result_holder, viewGroup, false);
@@ -36,14 +36,13 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.HintViewHo
 
     @Override
     public void onBindViewHolder( HintViewHolder holder, int i) {
-        holder.routeText.setText(holders.get(i).route);
-        holder.timeText.setText(holders.get(i).time);
-        holder.hintText.setText(holders.get(i).hints);
+        holder.timeText.setText(routesList.get(i).getDuration());
+        holder.hintText.setText(routesList.get(i).getHtml_instructions());
     }
 
     @Override
     public int getItemCount() {
-        return holders.size();
+        return routesList.size();
     }
 
 

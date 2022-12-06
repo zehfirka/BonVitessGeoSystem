@@ -20,36 +20,24 @@
         >
 
         <TextView
-            android:id="@+id/stepText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/montserrat_bold"
-            android:textColor="@color/basic"
-            android:textSize="14dp" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/timeText"
             android:layout_alignParentLeft="true"
             android:layout_centerHorizontal="true"
-            android:fontFamily="@font/montserrat_medium"
+            android:fontFamily="@font/montserrat_alternates"
             android:textColor="@color/second"
-            android:layout_below="@+id/stepText"
             />
 
         <TextView
             android:id="@+id/hintText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/timeText"
             android:layout_marginLeft="15dp"
-            android:fontFamily="@font/montserrat_medium"
-            android:textColor="@color/second"
             android:layout_marginTop="5dp"
-            android:layout_below="@id/stepText"
-            />
+            android:layout_toRightOf="@id/timeText"
+            android:fontFamily="@font/montserrat_light"
+            android:textColor="@color/second" />
 
     </RelativeLayout>
 

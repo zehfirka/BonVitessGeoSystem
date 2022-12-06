@@ -23,8 +23,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    public final static String START_TEXT = "ua.pack.basetest.MESSAGE";
-    public final static String FINISH_TEXT = "ua.pack.basetest.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
