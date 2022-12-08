@@ -111,7 +111,7 @@
         android:id="@+id/adView"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        ads:adSize="BANNER"
+        ads:adSize="SMART_BANNER"
         ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
         android:layout_height="wrap_content"/>
 
