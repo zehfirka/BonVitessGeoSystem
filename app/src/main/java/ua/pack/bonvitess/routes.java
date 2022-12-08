@@ -1,19 +1,23 @@
 package ua.pack.bonvitess;
 
+import com.google.gson.annotations.SerializedName;
+
 public class routes {
-    private String duration;
-    private String html_instructions;
+    @SerializedName("id")
+    private String title;
+    @SerializedName("title")
+    private String body;
 
-    public routes(String duration, String html_instructions) {
-        this.duration = duration;
-        this.html_instructions = html_instructions;
+    public routes(String title, String body) {
+        this.title = title;
+        this.body = body;
     }
 
-    public String getDuration() {
-        return duration;
+    public String getTitle() {
+        return title;
     }
 
-    public String getHtml_instructions() {
-        return html_instructions;
+    public String getBody() {
+        return body;
     }
 }

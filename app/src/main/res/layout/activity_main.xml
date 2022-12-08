@@ -35,8 +35,8 @@
         android:layout_width="match_parent"
         app:cardBackgroundColor="@color/contrast_base"
         android:id="@+id/cardView"
-        android:layout_alignParentBottom="true"
-        android:layout_height="340dp"
+        android:layout_above="@id/adView"
+        android:layout_height="260dp"
         app:cardCornerRadius="0dp">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -78,7 +78,7 @@
                 android:layout_width="360dp"
                 android:layout_height="48dp"
                 android:layout_below="@id/editTextStart"
-                android:layout_marginTop="10sp"
+                android:layout_marginTop="15sp"
                 android:autofillHints=""
                 android:drawableStart="@drawable/map_marker_right_outline"
                 android:ems="10"
@@ -92,65 +92,6 @@
                 android:textColorHint="@color/second"
                 android:textColorLink="@color/second" />
 
-            <TextView
-                android:id="@+id/infoTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/editTextFinish"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/montserrat_alternates"
-                android:text="@string/choosing_text"
-                android:textColor="@color/basic"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginTop="15dp"
-                android:checkedButton="@id/radioButton"
-                android:layout_below="@id/infoTextView"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:fontFamily="@font/montserrat_alternates"
-                    android:text="За зупинками"
-                    android:textColor="@color/second"
-                    android:textSize="12dp"
-                    android:textStyle="bold" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:fontFamily="@font/montserrat_alternates"
-                    android:text="За точками"
-                    android:textAllCaps="false"
-                    android:textColor="@color/second"
-                    android:textSize="12dp"
-                    android:textStyle="bold" />
-
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:fontFamily="@font/montserrat_alternates"
-                    android:text="За номером"
-                    android:textColor="@color/second"
-                    android:textSize="12dp"
-                    android:textStyle="bold" />
-
-
-            </RadioGroup>
-
             <Button
                 android:id="@+id/button3"
                 style="@style/search_Button"
@@ -158,11 +99,20 @@
                 android:layout_height="wrap_content"
                 android:onClick="mOnButtonClick"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/radioGroup"
-                android:layout_marginTop="-20dp"/>
+                android:layout_below="@id/editTextFinish"
+                android:layout_marginTop="30dp"/>
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

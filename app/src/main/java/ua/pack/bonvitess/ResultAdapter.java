@@ -36,8 +36,8 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.HintViewHo
 
     @Override
     public void onBindViewHolder( HintViewHolder holder, int i) {
-        holder.timeText.setText(routesList.get(i).getDuration());
-        holder.hintText.setText(routesList.get(i).getHtml_instructions());
+        holder.timeText.setText(routesList.get(i).getTitle());
+        holder.hintText.setText(routesList.get(i).getBody());
     }
 
     @Override
