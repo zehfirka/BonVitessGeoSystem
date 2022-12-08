@@ -18,9 +18,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DisplayResultActivity extends AppCompatActivity {
-    private List<routes> routesList = new ArrayList<>();
+    private List<routes> routesList = new ArrayList<>(); //підвʼязано до окремого класу
     private RecyclerView recyclerView;
-    ResultAdapter resultAdapter;
+    ResultAdapter resultAdapter; //адаптер до ресуклера
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +30,9 @@ public class DisplayResultActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(getBaseContext());
         recyclerView.setLayoutManager(llm);
         resultAdapter = new ResultAdapter(routesList);
-        recyclerView.setAdapter(resultAdapter);
+        recyclerView.setAdapter(resultAdapter); //підключення адаптера
 
-        fetchHolders();
+        fetchHolders(); //ця штука відправляє запит апі
 
 
 
@@ -42,13 +42,13 @@ public class DisplayResultActivity extends AppCompatActivity {
         startActivity(returnClick);
     }
 
-    private void fetchHolders(){
+    private void fetchHolders(){ //тут воно посилається на клас RetrofitClient і бере в callback ліст
         RetrofitClient.getRetrofitClient().getRoutes().enqueue(new Callback<List<routes>>() {
             @Override
             public void onResponse(Call<List<routes>> call, Response<List<routes>> response) {
-                if (response.isSuccessful() && response.body() != null) {
+                if (response.isSuccessful() && response.body() != null) { //тут перевірка на успішність запиту
                     routesList.addAll(response.body());
-                    resultAdapter.notifyDataSetChanged();
+                    resultAdapter.notifyDataSetChanged(); //адаптер отримує інфу що щось змінилось
                 }
             }
 

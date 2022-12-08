@@ -2,7 +2,7 @@ package ua.pack.bonvitess;
 
 import com.google.gson.annotations.SerializedName;
 
-public class routes {
+public class routes { //по логіці це "парсинг" файлу
     @SerializedName("id")
     private String title;
     @SerializedName("title")
