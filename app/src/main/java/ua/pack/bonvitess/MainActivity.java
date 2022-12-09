@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.content.Intent;
 import com.google.android.gms.ads.AdRequest;
@@ -24,6 +25,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private AdView mAdView;
+    public boolean SwitchState;
+    AppSettingsActivity appSettingsActivity = new AppSettingsActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         EditText startEdit = findViewById(R.id.editTextStart);
         EditText finishEdit = findViewById(R.id.editTextFinish);
+
+
+
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override

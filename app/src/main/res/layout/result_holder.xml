@@ -4,8 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cv"
-    app:cardBackgroundColor="@color/contrast_base"
     app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@color/yellow_contrast"
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp"
     android:layout_marginLeft="8dp"
@@ -25,8 +25,8 @@
             android:id="@+id/timeText"
             android:layout_alignParentLeft="true"
             android:layout_centerHorizontal="true"
-            android:fontFamily="@font/montserrat_alternates"
-            android:textColor="@color/second"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:textColor="@color/black800_base"
             />
 
         <TextView
@@ -36,8 +36,8 @@
             android:layout_marginLeft="15dp"
             android:layout_centerHorizontal="true"
             android:layout_toRightOf="@id/timeText"
-            android:fontFamily="@font/montserrat_light"
-            android:textColor="@color/second" />
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black800_base" />
 
     </RelativeLayout>
 

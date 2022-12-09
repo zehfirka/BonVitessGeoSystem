@@ -9,9 +9,16 @@
     <color name="white">#FFFFFFFF</color>
     <color name="basic">#FFFFFFFF</color>
     <color name="second">#FFFFFFFF</color>
-    <color name="grey_base">#FFFFFFFF</color>
+    <color name="grey_base">#474A57</color>
     <color name="contrast">#417D7A</color>
     <color name="night_white">#EEEEEE</color>
     <color name="contrast_base">#417D7A</color>
+    <color name="yellow_contrast">#FFF4CC</color>
+    <color name="black800_base">#474A57</color>
+    <color name="orange">#F95A2C</color>
+    <color name="card_redly">#FFE8E8</color>
+    <color name="edit_color">#ffffff</color>
+    <color name="stable_orange">#F95A2C</color>
+    <color name="backgroundWhite">#ffffff</color>
 
 </resources>

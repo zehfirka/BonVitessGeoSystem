@@ -5,67 +5,112 @@
     android:id="@+id/settingsLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_base"
+    android:background="@color/backgroundWhite"
     tools:context=".AppSettingsActivity">
 
     <TextView
         android:id="@+id/settingsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+       android:layout_marginLeft="24dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/montserrat_alternates"
+        android:fontFamily="@font/montserrat_extrabold"
         android:text="Налаштування"
         android:textAlignment="center"
-        android:textColor="@color/contrast"
+        android:textAllCaps="true"
+        android:textColor="@color/black800_base"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <RadioGroup
-        android:id="@+id/settingsRadioGroup"
+    <View
+        android:id="@+id/view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/settingsTextView2"
-        android:layout_marginTop="20dp">
-
-        <RadioButton
-            android:id="@+id/settingsRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_light"
-            android:text="Вимкнено"
-            android:textColor="@color/contrast"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/settingsRadio2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_light"
-            android:text="Ввімкнено"
-            android:textColor="@color/contrast"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/settingsRadio3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_light"
-            android:text="Як в системі"
-            android:textColor="@color/contrast"
-            android:textStyle="bold" />
-    </RadioGroup>
+        android:layout_height="180dp"
+        android:layout_below="@id/settingsTextView"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/card_big"
+        android:clickable="false" />
 
     <TextView
         android:id="@+id/settingsTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/settingsTextView"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/montserrat_alternates"
-        android:text="Темний режим | Dark Mode"
-        android:textColor="@color/contrast"
-        android:textSize="16sp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:text="Темний режим"
+        android:textAllCaps="true"
+        android:textColor="@color/black800_base"
+        android:paddingLeft="24dp"
+        android:layout_marginLeft="24dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:paddingLeft="24dp"
+        android:track="@drawable/toggle_selector"
+        android:thumb="@drawable/active_dot"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="24dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_below="@id/settingsTextView2"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black800_base"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Так, тут є темна тема, спробуй" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_below="@id/view"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/card_small"
+        android:clickable="true"
+        android:onClick="mOnViewClick" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Розробники"
+        android:layout_below="@id/switch1"
+        android:paddingLeft="24dp"
+        android:layout_marginLeft="24dp"
+        android:textAllCaps="true"
+        android:textColor="@color/black800_base"
+        android:textSize="24dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/montserrat_extrabold"
+
+
+        />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black800_base"
+        android:fontFamily="@font/montserrat"
+        android:text="Невелика інформація про нас" />
 
 </RelativeLayout>

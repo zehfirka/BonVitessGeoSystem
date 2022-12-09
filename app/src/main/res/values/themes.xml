@@ -10,7 +10,7 @@
         <item name="colorSecondaryVariant">@color/contrast_base</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorSecondary</item>
+        <item name="android:statusBarColor">@color/black800_base</item>
         <!-- Customize your theme here. -->
     </style>
     <style name="Theme.BonVitess.NoActionBar">
@@ -35,13 +35,16 @@
     </style>
     <style name="Button">
         ..
-        <item name="android:background">@drawable/cog_outline</item>
+        <item name="android:background">@drawable/settings_icon</item>
         ..
     </style>
 
     <style name="search_Button">
-        <item name="android:background">@drawable/magnify</item>
-        <item name="android:numbersBackgroundColor">@color/white</item>
-        <item name="backgroundTint">@color/white</item>
+        <item name="android:background">@drawable/finder_button</item>
     </style>
+
+    <style name="toggleButton">
+        <item name="android:background">@drawable/toggle_selector</item>
+    </style>
+
 </resources>
