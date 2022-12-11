@@ -9,9 +9,6 @@
       android:fillColor="@color/yellow_contrast"
       android:strokeColor="#18191F"/>
   <path
-      android:pathData="M279,56m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"
-      android:fillColor="@color/orange"/>
-  <path
       android:pathData="M276.33,64L284.33,56L276.33,48"
       android:strokeLineJoin="round"
       android:strokeWidth="3"

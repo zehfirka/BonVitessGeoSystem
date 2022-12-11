@@ -19,7 +19,7 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/black800_base"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <View
@@ -45,7 +45,7 @@
         android:textColor="@color/black800_base"
         android:paddingLeft="24dp"
         android:layout_marginLeft="24dp"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <Switch
@@ -62,7 +62,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_below="@id/settingsTextView2"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/montserrat"
         android:paddingLeft="24dp"
         android:layout_marginLeft="24dp"
@@ -89,13 +89,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Розробники"
-        android:layout_below="@id/switch1"
+        android:layout_below="@id/view"
         android:paddingLeft="24dp"
         android:layout_marginLeft="24dp"
         android:textAllCaps="true"
         android:textColor="@color/black800_base"
         android:textSize="24dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/montserrat_extrabold"
 
 
@@ -112,5 +112,16 @@
         android:textColor="@color/black800_base"
         android:fontFamily="@font/montserrat"
         android:text="Невелика інформація про нас" />
+
+    <TextView
+        android:id="@+id/aboutApp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black800_base"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="2022 BonVitess. Release 1.0" />
 
 </RelativeLayout>
