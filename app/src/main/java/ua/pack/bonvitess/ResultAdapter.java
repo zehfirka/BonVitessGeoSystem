@@ -10,10 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.HintViewHolder> {
-    List<routes> routesList; //знову ліст
+    List<Root> rootList; //знову ліст
+    public Step step;
+    public Leg leg;
 
-    public ResultAdapter(List<routes> routesList) {
-        this.routesList = routesList; //по логіці це конструктор
+    public ResultAdapter(List<Root> rootList) {
+        this.rootList = rootList; //по логіці це конструктор
     }
 
     public static class HintViewHolder extends RecyclerView.ViewHolder {
@@ -36,13 +38,13 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.HintViewHo
 
     @Override
     public void onBindViewHolder( HintViewHolder holder, int i) { //ось оця штука вставляє отримані дані в текстВью
-        holder.timeText.setText(routesList.get(i).getTitle());
-        holder.hintText.setText(routesList.get(i).getBody());
+        holder.timeText.setText(leg.getDuration().toString());
+        holder.hintText.setText(step.getHTMLInstructions());
     }
 
     @Override
     public int getItemCount() {
-        return routesList.size(); //практичної користі немає
+        return rootList.size(); //практичної користі немає
     }
 
 
