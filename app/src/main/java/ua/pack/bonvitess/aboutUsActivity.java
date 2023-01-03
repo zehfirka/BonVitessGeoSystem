@@ -1,19 +1,21 @@
 package ua.pack.bonvitess;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
-public class aboutUs extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class aboutUsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
     }
+
+    //декілька обробників натискання на інформаційні картки
 
     public void onFirstViewCLick(View view) {
         Intent firstView = new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/klymenko_ruslana_?igshid=YmMyMTA2M2Y="));

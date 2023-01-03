@@ -8,9 +8,10 @@
     <color name="contrast_base">#FF000000</color>
     <color name="contrast">#FFD369</color>
     <color name="card_redly">#F95A2C</color>
-    <color name="yellow_contrast">#1947E5</color>
+    <color name="yellow_contrast">#579BB1</color>
     <color name="black800_base">#EEEFF4</color>
     <color name="orange">#EEEFF4</color>
     <color name="edit_color">#FFF4CC</color>
     <color name="backgroundWhite">#474A57</color>
+    <color name="lightBlue">#61876E</color>
 </resources>

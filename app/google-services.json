@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "443660865684",
+    "project_id": "bonvitess",
+    "storage_bucket": "bonvitess.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443660865684:android:f4fd6e5ee5cf5620d82481",
+        "android_client_info": {
+          "package_name": "ua.pack.bonvitess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443660865684-2dj4b5clfksro4thievte1m1egn673r1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk2TPN6rmB31xWHXhr30FWzqNuem-S6CU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443660865684-2dj4b5clfksro4thievte1m1egn673r1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

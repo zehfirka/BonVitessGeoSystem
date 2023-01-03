@@ -44,7 +44,7 @@
     </style>
 
     <style name="toggleButton">
-        <item name="android:background">@drawable/toggle_selector</item>
+        <item name="android:background">@drawable/switch_selector</item>
     </style>
 
 </resources>

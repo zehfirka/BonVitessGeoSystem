@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundWhite"
-    tools:context=".aboutUs">
+    tools:context=".aboutUsActivity">
 
     <TextView
         android:id="@+id/textView6"
@@ -13,11 +12,11 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black800_base"
         android:fontFamily="@font/montserrat_extrabold"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
         android:textAllCaps="true"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:layout_marginTop="24dp"
-        android:text="Розробники застосунку" />
+        android:text="@string/developers_aboutUs_activity" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,9 +35,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="24dp"
-                android:background="@drawable/architect"
+                android:background="@drawable/infocard_2"
                 android:clickable="true"
-                android:onClick="onSecondViewClick" />
+                android:onClick="onSecondViewClick"
+                android:focusable="true" />
 
             <View
                 android:id="@+id/view4"
@@ -47,9 +47,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="24dp"
-                android:background="@drawable/analytik"
+                android:background="@drawable/infocard_1"
                 android:clickable="true"
-                android:onClick="onFirstViewCLick" />
+                android:onClick="onFirstViewCLick"
+                android:focusable="true" />
 
             <View
                 android:id="@+id/view5"
@@ -59,9 +60,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="24dp"
-                android:background="@drawable/programmer"
+                android:background="@drawable/infocard_3"
                 android:clickable="true"
-                android:onClick="onThirdViewClick" />
+                android:onClick="onThirdViewClick"
+                android:focusable="true" />
 
             <View
                 android:id="@+id/view6"
@@ -71,9 +73,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="24dp"
-                android:background="@drawable/documentator"
+                android:background="@drawable/infocard_4"
                 android:clickable="true"
-                android:onClick="onFourthViewClick" />
+                android:onClick="onFourthViewClick"
+                android:focusable="true" />
 
             <View
                 android:id="@+id/view7"
@@ -83,9 +86,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="24dp"
-                android:background="@drawable/tester"
+                android:background="@drawable/infocard_5"
                 android:clickable="true"
-                android:onClick="onFifthViewClick" />
+                android:onClick="onFifthViewClick"
+                android:focusable="true" />
         </RelativeLayout>
     </ScrollView>
 

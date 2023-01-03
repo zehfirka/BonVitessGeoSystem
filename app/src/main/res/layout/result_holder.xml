@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/timeText"
+            android:id="@+id/busnumber_text"
             android:layout_alignParentLeft="true"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/montserrat_extrabold"
@@ -30,14 +30,42 @@
             />
 
         <TextView
-            android:id="@+id/hintText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_centerHorizontal="true"
-            android:layout_toRightOf="@id/timeText"
             android:fontFamily="@font/montserrat"
-            android:textColor="@color/black800_base" />
+            android:textColor="@color/black800_base"
+            android:id="@+id/route_text"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/busnumber_text"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black800_base"
+            android:id="@+id/fee_text"
+            android:layout_below="@id/route_text"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black800_base"
+            android:id="@+id/distance_text"
+            android:layout_below="@id/fee_text"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black800_base"
+            android:id="@+id/interval_text"
+            android:layout_below="@id/distance_text"
+            android:layout_marginTop="5dp"
+            />
+
 
     </RelativeLayout>
 

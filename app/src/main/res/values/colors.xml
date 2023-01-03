@@ -20,5 +20,6 @@
     <color name="edit_color">#ffffff</color>
     <color name="stable_orange">#F95A2C</color>
     <color name="backgroundWhite">#ffffff</color>
+    <color name="lightBlue">#BFEAF5</color>
 
 </resources>
