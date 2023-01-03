@@ -1,7 +1,9 @@
 package ua.pack.bonvitess;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,6 +34,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     //оголошення змінних
     private GoogleMap mMap;
     public String startPoint,endPoint;
+    public TextView floatingText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +43,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //Коректна робота Google Map
         ua.pack.bonvitess.databinding.ActivityMapsBinding binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        floatingText = findViewById(R.id.floatingTextView);
 
         //отримання даних з MainActivity
         Intent intent = getIntent();
         startPoint = intent.getStringExtra("startA");
         endPoint = intent.getStringExtra("startB");
+        floatingText.setText(startPoint + " - " + endPoint);
 
         // Ініціалізуємо SupportFragment та повідомляємо про готовність роботи
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -76,7 +81,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     // Малюємо маршрут на карті за допомогою PolylineOptions
                     List<LatLng> route = PolyUtil.decode(directionResponse.getRoutes().get(0).getOverviewPolyline().getPoints());
-                    mMap.addPolyline(new PolylineOptions().addAll(route).color(R.color.stable_orange));
+                    mMap.addPolyline(new PolylineOptions().addAll(route).color(Color.RED));
 
                     //позиціонуємо камеру
                     LatLngBounds polylineBounds = getRouteBounds(route);

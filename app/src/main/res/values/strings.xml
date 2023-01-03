@@ -1,16 +1,11 @@
 <resources>
-    <string name="app_name">BonVitess</string>
-    <string name="stopA"> Початкова зупинка</string>
-    <string name="stopB"> Кінцева зупинка</string>
-    <string name="pointA"> Початкова точка</string>
-    <string name="pointB"> Кінцева точка</string>
+    <string name="app_name" translatable="false">BonVitess</string>
     <string name="busNumber">Номер маршруту</string>
-    <string name="title_activity_display_result">DisplayResultActivity</string>
-    <string name="choosing_text">Критерії пошуку:</string>
+    <string name="title_activity_display_result" translatable="false">DisplayResultActivity</string>
     <string name="button_name">Пошук</string>
-    <string name="title_activity_maps_result">MapsResultActivity</string>
-    <string name="title_activity_maps">MapsActivity</string>
-    <string name="google_maps_api_key">AIzaSyCA44ILPHwirrXtzVoI7pwR3kJJkr8X-kA</string>
+    <string name="title_activity_maps_result" translatable="false">MapsResultActivity</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="google_maps_api_key" translatable="false">AIzaSyCA44ILPHwirrXtzVoI7pwR3kJJkr8X-kA</string>
     <string name="list_of_routes">Список маршрутів (м.Умань)</string>
     <string name="starting_point">Початкова точка</string>
     <string name="ending_point">Кінцева точка</string>
@@ -19,7 +14,7 @@
     <string name="darkmode_subtitle">Так, тут є темна тема, спробуй</string>
     <string name="developers_text">Розробники</string>
     <string name="developers_subtitle">Невелика інформація про нас</string>
-    <string name="app_version">2022 BonVitess. Release 1.0</string>
+    <string name="app_version" translatable="false">2022 BonVitess. Release 1.0</string>
     <string name="routes_titletext">Маршрути</string>
     <string name="routes_subtitle">Переглянь всі існуючі маршрути міста</string>
     <string name="developers_aboutUs_activity">Розробники застосунку</string>
