@@ -55,9 +55,5 @@ public class AppSettingsActivity extends AppCompatActivity {
         Intent informationViewClick = new Intent(this, aboutUsActivity.class);
         startActivity(informationViewClick);
     }
-    //обробка натискання на картку інформації про наявні маршрути
-    public void mOnRouteViewCLick(View view) {
-        Intent routeViewClick = new Intent(this,RoutesActivity.class);
-        startActivity(routeViewClick);
-    }
+
 }

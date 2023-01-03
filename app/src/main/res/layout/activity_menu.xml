@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    tools:context=".MenuActivity">
+
+    <TextView
+        android:id="@+id/MenuText_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:text="Меню"
+        android:textAllCaps="true"
+        android:textColor="@color/stable_orange"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/mainActivity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MenuText_welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:clickable="true"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:onClick="OnMainActivityClick"
+        android:text="Головна"
+        android:textAllCaps="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/routesActivity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainActivity_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:clickable="true"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:onClick="OnRouteActivityClick"
+        android:text="Маршрути"
+        android:textAllCaps="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/settingsActivity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/routesActivity_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:clickable="true"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:onClick="OnSettingsActivityClick"
+        android:text="Налаштування"
+        android:textAllCaps="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/aboutApp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/app_version"
+        android:textColor="@color/black800_base" />
+</RelativeLayout>

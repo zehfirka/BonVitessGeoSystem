@@ -25,9 +25,9 @@
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
-        android:layout_below="@id/routesView"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="20dp"
+        android:layout_below="@id/settingsTextView"
         android:layout_marginRight="24dp"
         android:background="@drawable/card_big"
         android:clickable="false" />
@@ -117,54 +117,4 @@
         android:text="@string/developers_subtitle"
         tools:ignore="RtlSymmetry" />
 
-    <TextView
-        android:id="@+id/aboutApp_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:textColor="@color/black800_base"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="5dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/app_version" />
-
-    <View
-        android:id="@+id/routesView"
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_below="@id/settingsTextView"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="24dp"
-        android:background="@drawable/card_small_blue"
-        android:clickable="true"
-        android:onClick="mOnRouteViewCLick"
-        android:focusable="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/routes_titletext"
-        android:layout_alignTop="@+id/routesView"
-        android:layout_marginTop="15dp"
-        android:paddingStart="24dp"
-        android:layout_marginStart="24dp"
-        android:textColor="@color/black800_base"
-        android:fontFamily="@font/montserrat_extrabold"
-        android:textAllCaps="true"
-        android:textSize="24sp"
-        android:id="@+id/rText"
-        tools:ignore="RtlSymmetry" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/routes_subtitle"
-        android:layout_below="@id/rText"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:layout_marginStart="24dp"
-        android:textColor="@color/black800_base"
-        android:fontFamily="@font/montserrat"
-        android:textSize="16sp"
-        tools:ignore="RtlSymmetry" />
 </RelativeLayout>

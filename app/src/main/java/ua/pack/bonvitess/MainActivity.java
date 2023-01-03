@@ -107,10 +107,9 @@ public class MainActivity extends AppCompatActivity {
 
     //Обробка натискання на кнопку налаштувань
 
-    public void OnSettingsButtonClick(View view) {
-        Intent intSettings = new Intent(this, AppSettingsActivity.class);
-        startActivity(intSettings);
-
+    public void onMenuButtonClick(View view) {
+        Intent intMenu = new Intent(this, MenuActivity.class);
+        startActivity(intMenu);
     }
 }
 

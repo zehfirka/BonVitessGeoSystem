@@ -30,7 +30,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:elevation="5dp"
-        android:onClick="OnSettingsButtonClick" />
+        android:onClick="onMenuButtonClick" />
 
     <View
         android:id="@+id/view8"
