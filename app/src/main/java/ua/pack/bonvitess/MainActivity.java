@@ -95,15 +95,17 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,"Введіть початкову точку",Toast.LENGTH_SHORT).show();
         } else if (endPoint.isEmpty()) {
             Toast.makeText(MainActivity.this,"Введіть кінцеву точку",Toast.LENGTH_SHORT).show();
+        } else if (startPoint.equals(endPoint)){
+            Toast.makeText(MainActivity.this,"Так не можна, точки маршруту мають бути різними",Toast.LENGTH_SHORT).show();
         } else {
-            //відкриваємо нове вікно Activity
-            Intent intClick = new Intent(this,MapsActivity.class);
-            intClick.putExtra("startA", startPoint);
-            intClick.putExtra("startB",endPoint);
-            startActivity(intClick);
-        }
+                //відкриваємо нове вікно Activity
+                Intent intClick = new Intent(this,MapsActivity.class);
+                intClick.putExtra("startA", startPoint);
+                intClick.putExtra("startB",endPoint);
+                startActivity(intClick);
+            }
 
-    }
+        }
 
     //Обробка натискання на кнопку налаштувань
 
