@@ -3,6 +3,8 @@ package ua.pack.bonvitess;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.maps.android.PolyUtil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -28,6 +31,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import ua.pack.bonvitess.databinding.ActivityMapsBinding;
 import ua.pack.bonvitess.parceUtility.DirectionResponse;
 import ua.pack.bonvitess.parceUtility.MapService;
+import ua.pack.bonvitess.parceUtility.Step;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -57,6 +61,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
+
+
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
@@ -70,7 +76,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MapService service = retrofit.create(MapService.class);
 
         //Відправка запиту
-        Call<DirectionResponse> directionResponseCall = service.getDirection(startPoint, endPoint, "transit", getString(R.string.google_maps_api_key));
+        Call<DirectionResponse> directionResponseCall = service.getDirection(startPoint, endPoint, "transit","uk", getString(R.string.google_maps_api_key));
         directionResponseCall.enqueue(new Callback<DirectionResponse>() {
             @Override
             //метод обробки якщо відправка запиту успішна
@@ -78,6 +84,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (response.isSuccessful() && response.body() != null) {
                     //зберігаємо інформацію
                     DirectionResponse directionResponse = response.body();
+                    List<Step> steps = response.body().getRoutes().get(0).legs[0].steps;
+
+                    //обробляємо текстові інструкції
+                    List<String> instructions = new ArrayList<>();
+                    for (Step step : steps) {
+                        instructions.add(step.getHtmlInstructions());
+                    }
+
+                    // Налаштовуємо адаптер для ListView та виводимо всі текстові підказки
+                    ListView listView = findViewById(R.id.stepsListView);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, instructions);
+                    listView.setAdapter(adapter);
+
+
 
                     // Малюємо маршрут на карті за допомогою PolylineOptions
                     List<LatLng> route = PolyUtil.decode(directionResponse.getRoutes().get(0).getOverviewPolyline().getPoints());

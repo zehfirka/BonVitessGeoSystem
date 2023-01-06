@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Route {
     // клас для обробки запиту до АРІ
+    public Leg[] legs;
 
     @SerializedName("overview_polyline") //використовується для коректної обробки запиту
     private OverviewPolyline overviewPolyline;

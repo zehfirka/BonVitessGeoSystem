@@ -7,5 +7,5 @@ import retrofit2.http.Query;
 // Інтерфейс, який буде використовуватися Retrofit для виконання HTTP-запиту
 public interface MapService {
     @GET("json")
-    Call<DirectionResponse> getDirection(@Query("origin") String origin, @Query("destination") String destination, @Query("mode") String mode, @Query("key") String key);
+    Call<DirectionResponse> getDirection(@Query("origin") String origin, @Query("destination") String destination, @Query("mode") String mode,@Query("language") String lang, @Query("key") String key);
 }
