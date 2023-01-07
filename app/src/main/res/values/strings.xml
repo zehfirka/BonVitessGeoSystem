@@ -14,9 +14,13 @@
     <string name="darkmode_subtitle">Так, тут є темна тема, спробуй</string>
     <string name="developers_text">Розробники</string>
     <string name="developers_subtitle">Невелика інформація про нас</string>
-    <string name="app_version" translatable="false">2022 BonVitess. Release 1.0</string>
+    <string name="app_version" translatable="false">2023 BonVitess. Release 1.0.3</string>
     <string name="routes_titletext">Маршрути</string>
     <string name="routes_subtitle">Переглянь всі існуючі маршрути міста</string>
     <string name="developers_aboutUs_activity">Розробники застосунку</string>
+    <string name="menu_text">Меню</string>
+    <string name="route_textbutton">Маршрути</string>
+    <string name="settings_textbutton">Налаштування</string>
+    <string name="main_textbutton">Головна</string>
 
 </resources>

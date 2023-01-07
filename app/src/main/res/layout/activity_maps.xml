@@ -43,6 +43,7 @@
         android:fontFamily="@font/montserrat"
         android:textColor="@color/black800_base"
         android:textSize="16dp"
+        android:paddingEnd="12dp"
         android:layout_marginStart="42dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="50dp" />
