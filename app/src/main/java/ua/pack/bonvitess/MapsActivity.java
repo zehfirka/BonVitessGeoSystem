@@ -53,7 +53,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Intent intent = getIntent();
         startPoint = intent.getStringExtra("startA");
         endPoint = intent.getStringExtra("startB");
-        floatingText.setText(startPoint + " - " + endPoint);
 
         // Ініціалізуємо SupportFragment та повідомляємо про готовність роботи
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -84,30 +83,34 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (response.isSuccessful() && response.body() != null) {
                     //зберігаємо інформацію
                     DirectionResponse directionResponse = response.body();
-                    List<Step> steps = response.body().getRoutes().get(0).legs[0].steps;
+                    try {
+                        List<Step> steps = response.body().getRoutes().get(0).legs[0].steps;
+                        List<String> instructions = new ArrayList<>();
+                        for (Step step : steps) {
+                            instructions.add(step.getHtmlInstructions());
+                        }
+                        floatingText.setText(startPoint + " - " + endPoint);
 
-                    //обробляємо текстові інструкції
-                    List<String> instructions = new ArrayList<>();
-                    for (Step step : steps) {
-                        instructions.add(step.getHtmlInstructions());
+                        // Налаштовуємо адаптер для ListView та виводимо всі текстові підказки
+                        ListView listView = findViewById(R.id.stepsListView);
+                        ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, instructions);
+                        listView.setAdapter(adapter);
+
+
+                        // Малюємо маршрут на карті за допомогою PolylineOptions
+                        List<LatLng> route = PolyUtil.decode(directionResponse.getRoutes().get(0).getOverviewPolyline().getPoints());
+                        mMap.addPolyline(new PolylineOptions().addAll(route).color(Color.RED));
+
+                        //позиціонуємо камеру
+                        LatLngBounds polylineBounds = getRouteBounds(route);
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(polylineBounds,15));
+                    }
+                    catch (IndexOutOfBoundsException e) {
+                        floatingText.setText("Маршрут не знайдено");
+                        Toast.makeText(MapsActivity.this, "Помилка при отриманні маршруту", Toast.LENGTH_SHORT).show();
                     }
 
-                    // Налаштовуємо адаптер для ListView та виводимо всі текстові підказки
-                    ListView listView = findViewById(R.id.stepsListView);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, instructions);
-                    listView.setAdapter(adapter);
-
-
-
-                    // Малюємо маршрут на карті за допомогою PolylineOptions
-                    List<LatLng> route = PolyUtil.decode(directionResponse.getRoutes().get(0).getOverviewPolyline().getPoints());
-                    mMap.addPolyline(new PolylineOptions().addAll(route).color(Color.RED));
-
-                    //позиціонуємо камеру
-                    LatLngBounds polylineBounds = getRouteBounds(route);
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(polylineBounds,15));
-
-                } else {
+                } else{
                     // якщо відправка запиту успішна, але відповідь незадовільна
                     Toast.makeText(MapsActivity.this, "Помилка при отриманні маршруту", Toast.LENGTH_SHORT).show();
                 }
