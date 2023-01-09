@@ -38,7 +38,7 @@
         android:text=""
         android:fontFamily="@font/montserrat"
         android:textColor="@color/black800_base"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:paddingEnd="12dp"
         android:layout_marginStart="42dp"
         android:layout_marginEnd="24dp"
@@ -49,13 +49,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/view"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/montserrat_extrabold"
-        android:paddingLeft="24dp"
-        android:text="Ваш маршрут"
+        android:paddingStart="24dp"
+        android:text="@string/yourroute_text"
         android:textColor="@color/grey_base"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <ListView
         android:id="@+id/stepsListView"

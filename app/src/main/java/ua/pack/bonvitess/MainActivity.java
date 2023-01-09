@@ -147,6 +147,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
             //відкриваємо нове вікно Activity
             Intent intClick = new Intent(this, MapsActivity.class);
+            Bundle latlngs = new Bundle();
+            latlngs.putParcelable("start_position",startLatLng);
+            latlngs.putParcelable("end_position",endLatLng);
+            intClick.putExtra("bundle", latlngs);
             intClick.putExtra("startA", startPoint);
             intClick.putExtra("startB", endPoint);
             startActivity(intClick);

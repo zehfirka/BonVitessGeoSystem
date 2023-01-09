@@ -17,6 +17,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.maps.android.PolyUtil;
 
@@ -39,6 +40,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     public String startPoint,endPoint;
     public TextView floatingText;
+    public LatLng stLatLng, enLatLng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //отримання даних з MainActivity
         Intent intent = getIntent();
+        Bundle bundle = intent.getParcelableExtra("bundle");
+        stLatLng = bundle.getParcelable("start_position");
+        enLatLng = bundle.getParcelable("end_position");
         startPoint = intent.getStringExtra("startA");
         endPoint = intent.getStringExtra("startB");
 
@@ -103,7 +108,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         //позиціонуємо камеру
                         LatLngBounds polylineBounds = getRouteBounds(route);
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(polylineBounds,15));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(polylineBounds,14));
+
+                        mMap.addMarker(new MarkerOptions().position(stLatLng).title("Початок маршруту"));
+                        mMap.addMarker(new MarkerOptions().position(enLatLng).title("Кінець маршруту"));
                     }
                     catch (IndexOutOfBoundsException e) {
                         floatingText.setText("Маршрут не знайдено");

@@ -22,5 +22,7 @@
     <string name="route_textbutton">Маршрути</string>
     <string name="settings_textbutton">Налаштування</string>
     <string name="main_textbutton">Головна</string>
+    <string name="wheretogo_text">Куди їдемо?</string>
+    <string name="yourroute_text">Ваш маршрут</string>
 
 </resources>

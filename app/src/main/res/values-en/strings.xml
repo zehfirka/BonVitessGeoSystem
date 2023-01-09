@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="busNumber">Bus number</string>
+    <string name="button_name">Search</string>
+    <string name="list_of_routes">List of routes</string>
+    <string name="starting_point">startpoint</string>
+    <string name="ending_point">endpoint</string>
+    <string name="settings_text">Settings</string>
+    <string name="darkmode_text">Dark mode</string>
+    <string name="darkmode_subtitle">Yeah, we have a dark mode! Just try it.</string>
+    <string name="developers_text">Developers</string>
+    <string name="developers_subtitle">Information about us</string>
+    <string name="routes_titletext">Routes</string>
+    <string name="routes_subtitle">Look for all existing routes</string>
+    <string name="developers_aboutUs_activity">Developers Team</string>
+    <string name="menu_text">Menu</string>
+    <string name="route_textbutton">Routes</string>
+    <string name="settings_textbutton">Settings</string>
+    <string name="main_textbutton">Main</string>
+    <string name="wheretogo_text">Where to go?</string>
+    <string name="yourroute_text">Your route</string>
+</resources>
