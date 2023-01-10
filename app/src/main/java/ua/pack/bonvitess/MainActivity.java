@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     public EditText etStartPoint, etFinishPoint;
     public String startPoint, endPoint, currentLocation;
     public LatLng startLatLng, endLatLng;
+    public double lat, lng;
     FusedLocationProviderClient client;
     ImageButton locationButtonStart, locationButtonFinish;
 
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
             if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 getLocation();
                 etStartPoint.setText(currentLocation);
+                startLatLng = new LatLng(lat,lng);
 
             }
 
@@ -86,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
             if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 getLocation();
                 etFinishPoint.setText(currentLocation);
+                endLatLng = new LatLng(lat,lng);
             }
         });
 
@@ -173,6 +176,9 @@ public class MainActivity extends AppCompatActivity {
             client.getLastLocation().addOnSuccessListener(location -> {
                 //перевірка на пусте значення
                 if (location != null) {
+                    lat = location.getLatitude();
+                    lng = location.getLongitude();
+
 
                     //зворотнє геокодування відповіді від АРІ
                     Geocoder geocoder = new Geocoder(MainActivity.this, Locale.getDefault());
