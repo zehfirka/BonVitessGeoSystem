@@ -17,6 +17,8 @@ Borshchagivska Street - Osvity Street
 Akademika Yangel Street - Degtyarivska Street
 Stepan Bandera Avenue - Peremohy Avenue
 Khreshchatyk Street - Vasylkivska Street
+
+Internet and geolocation needed!
 ----------------------------------------------------
 UA VERSION
 
@@ -34,3 +36,5 @@ UA VERSION
 Вулиця Академіка Янгеля - Вулиця Дегтярівська
 Проспект Степана Бандери - Проспект Перемоги
 Вулиця Хрещатик - Вулиця Васильківська
+
+Для коректної роботи необхідний доступ до мережі Інтернет та геолокації!
